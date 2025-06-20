@@ -1,6 +1,5 @@
 {
-  "name": "portofolio",
-  "version": "1.0.0",
+  "name": "ridho-portfolio",
   "scripts": {
     "start": "npx serve"
   },
