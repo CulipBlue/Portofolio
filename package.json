@@ -2,6 +2,7 @@
   "name": "ridho-portfolio",
   "version": "1.0.0",
   "description": "Personal portfolio website for Ridho Hafiz",
+  "main": "index.html",
   "scripts": {
     "start": "serve -s ."
   },
