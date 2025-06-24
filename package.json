@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal portfolio website for Ridho Hafiz",
   "scripts": {
-    "start": "npx serve -s ."
+    "start": "serve -s ."
   },
   "dependencies": {
     "serve": "^14.2.0"
