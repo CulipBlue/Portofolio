@@ -18,3 +18,18 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+// Tambahan: fade-in untuk .fade-in selain section
+window.addEventListener('DOMContentLoaded', () => {
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const onScroll = () => {
+    fadeEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        el.classList.add('visible');
+      }
+    });
+  };
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+});

@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ridho Hafiz - Portfolio</title>
   <link rel="stylesheet" href="style/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-
-  <header>
-    <h1>Ridho Hafiz</h1>
-    <p>.NET | Golang – Software Developer</p>
+  <header class="hero">
+    <div class="hero-content">
+      <img src="images/avatar.png" alt="Ridho Hafiz" class="avatar" onerror="this.style.display='none'"/>
+      <div>
+        <h1>Ridho Hafiz</h1>
+        <p class="subtitle">.NET | Golang – Software Developer</p>
+        <div class="social-links">
+          <a href="mailto:ridhohafiz98@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/ridho-hafiz" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="assets/Ridho_Hafiz_Resume.pdf" download title="Download Resume"><i class="fas fa-file-download"></i></a>
+        </div>
+      </div>
+    </div>
     <nav>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
@@ -18,20 +31,17 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
   <main>
-    <section id="about" class="fade-in">
+    <section id="about" class="card fade-in">
       <h2>About Me</h2>
       <p>
-          I'm a software developer with a background in electronics and computer science.
-          I specialize in backend development and hardware integration. 
-          I'm passionate about building scalable systems and solving complex technical challenges.
+        I'm a software developer with a background in electronics and computer science.<br>
+        I specialize in backend development and hardware integration.<br>
+        I'm passionate about building scalable systems and solving complex technical challenges.
       </p>
     </section>
-
-    <section id="experience" class="fade-in">
+    <section id="experience" class="card fade-in">
       <h2>Work Experience</h2>
-
       <div class="job">
         <h3>Software Engineer – PT Bank Rakyat Indonesia</h3>
         <p><em>August 2022 – Present</em></p>
@@ -43,7 +53,6 @@
           <li>Collaborated closely with cross-functional teams using Agile methodologies.</li>
         </ul>
       </div>
-
       <div class="job">
         <h3>Hardware Interface Programmer – PT Nutech Integrasi</h3>
         <p><em>April 2020 – August 2022</em></p>
@@ -55,46 +64,44 @@
         </ul>
       </div>
     </section>
-
-    <section id="skills" class="fade-in">
+    <section id="skills" class="card fade-in">
       <h2>Skills</h2>
-
-      <h3>Technical Skills</h3>
-      <ul>
-        <li>Backend development (.NET, Golang)</li>
-        <li>API integration (RESTful APIs, gRPC, WSDL)</li>
-        <li>Real-time communication (Socket.IO)</li>
-        <li>Microservices architecture & scheduler services</li>
-        <li>Databases: SQL & NoSQL</li>
-        <li>File systems: MinIO, FTP</li>
-      </ul>
-
-      <h3>Professional Skills</h3>
-      <ul>
-        <li>Problem-solving and critical thinking</li>
-        <li>Team collaboration and communication</li>
-        <li>Adaptability and time management</li>
-        <li>Negotiation and resilience</li>
-      </ul>
+      <div class="skills-container">
+        <div>
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Backend development (.NET, Golang)</li>
+            <li>API integration (RESTful APIs, gRPC, WSDL)</li>
+            <li>Real-time communication (Socket.IO)</li>
+            <li>Microservices architecture & scheduler services</li>
+            <li>Databases: SQL & NoSQL</li>
+            <li>File systems: MinIO, FTP</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Professional Skills</h3>
+          <ul>
+            <li>Problem-solving and critical thinking</li>
+            <li>Team collaboration and communication</li>
+            <li>Adaptability and time management</li>
+            <li>Negotiation and resilience</li>
+          </ul>
+        </div>
+      </div>
     </section>
-
-
-    <section id="contact" class="fade-in">
+    <section id="contact" class="card fade-in">
       <h2>Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:ridhohafiz98@gmail.com">ridhohafiz98@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/ridho-hafiz" target="_blank">linkedin.com/in/ridho-hafiz</a></li>
-        <li>Phone: +62 812 833 4210</li>
+      <ul class="contact-list">
+        <li><i class="fas fa-envelope"></i> <a href="mailto:ridhohafiz98@gmail.com">ridhohafiz98@gmail.com</a></li>
+        <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ridho-hafiz" target="_blank">linkedin.com/in/ridho-hafiz</a></li>
+        <li><i class="fas fa-phone"></i> +62 812 833 4210</li>
       </ul>
       <a href="assets/Ridho_Hafiz_Resume.pdf" download class="download-btn">📄 Download Resume</a>
     </section>
-
   </main>
-
   <footer>
     <p>&copy; 2025 Ridho Hafiz</p>
   </footer>
-
   <script src="scripts/main.js"></script>
 </body>
 </html>
