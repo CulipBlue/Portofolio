@@ -4,7 +4,7 @@
   "description": "Personal portfolio website for Ridho Hafiz",
   "main": "index.html",
   "scripts": {
-    "start": "serve -s ."
+    "start": "node server.js"
   },
   "dependencies": {
     "serve": "^14.2.4"
