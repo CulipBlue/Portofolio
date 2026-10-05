@@ -1,13 +1,18 @@
 {
-  "name": "ridho-portfolio",
-  "version": "1.0.0",
-  "description": "Personal portfolio website for Ridho Hafiz",
-  "main": "index.html",
+  "name": "ridho-hafiz-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Personal portfolio of Ridho Hafiz, a software developer specializing in .NET and Go.",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/main.js"
   },
-  "dependencies": {
-    "express": "^5.1.0",
-    "serve": "^14.2.4"
-  }
+  "engines": { "node": ">=20" },
+  "dependencies": { "express": "^5.2.1" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CulipBlue/Portofolio.git"
+  },
+  "license": "MIT"
 }

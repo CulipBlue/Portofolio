@@ -1,10 +1,25 @@
-const express = require('express');
+const express = require("express");
+const path = require("path");
+
 const app = express();
-
-// Serve static files from root (so index.html, images, scripts, style, assets, dll bisa diakses)
-app.use(express.static(__dirname));
-
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+const publicDirectory = path.join(__dirname, "public");
+
+app.disable("x-powered-by");
+
+app.get("/health", (_request, response) => {
+  response.status(200).json({ status: "ok" });
+});
+
+app.get("/resume.pdf", (_request, response) => {
+  response.download(path.join(__dirname, "assets", "Resume-Ridho-Hafiz.pdf"), "Ridho-Hafiz-Resume.pdf");
+});
+
+app.use(express.static(publicDirectory, {
+  extensions: ["html"],
+  maxAge: process.env.NODE_ENV === "production" ? "1h" : 0,
+}));
+
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Portfolio running on port ${port}`);
 });
