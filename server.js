@@ -17,7 +17,8 @@ app.get("/resume.pdf", (_request, response) => {
 
 app.use(express.static(publicDirectory, {
   extensions: ["html"],
-  maxAge: process.env.NODE_ENV === "production" ? "1h" : 0,
+  // Revalidate static assets on every visit so a new deploy cannot use stale CSS.
+  maxAge: 0,
 }));
 
 app.listen(port, "0.0.0.0", () => {
