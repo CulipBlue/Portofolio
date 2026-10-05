@@ -12,7 +12,7 @@ app.get("/health", (_request, response) => {
 });
 
 app.get("/resume.pdf", (_request, response) => {
-  response.download(path.join(__dirname, "assets", "Resume-Ridho-Hafiz.pdf"), "Ridho-Hafiz-Resume.pdf");
+  response.download(path.join(__dirname, "assets", "Resume-Ridho-Hafiz-2.pdf"), "Ridho-Hafiz-Resume.pdf");
 });
 
 app.use(express.static(publicDirectory, {
